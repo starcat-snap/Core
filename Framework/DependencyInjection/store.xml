@@ -7,25 +7,25 @@
         <parameter key="env(INSTANCE_ID)"/>
         <parameter key="instance_id">%env(INSTANCE_ID)%</parameter>
         <parameter key="snap.store_endpoints" type="collection">
-            <parameter key="my_extensions">/swplatform/licenseenvironment</parameter>
-            <parameter key="my_plugin_updates">/swplatform/pluginupdates</parameter>
-            <parameter key="environment_information">/swplatform/environmentinformation</parameter>
-            <parameter key="updater_extension_compatibility">/swplatform/autoupdate</parameter>
-            <parameter key="updater_permission">/swplatform/autoupdate/permission</parameter>
-            <parameter key="plugin_download">/swplatform/pluginfiles/{pluginName}</parameter>
-            <parameter key="app_generate_signature">/swplatform/generatesignature</parameter>
-            <parameter key="cancel_license">/swplatform/pluginlicenses/%s/cancel</parameter>
-            <parameter key="login">/swplatform/login</parameter>
-            <parameter key="create_rating">/swplatform/extensionstore/extensions/%s/ratings</parameter>
-            <parameter key="user_info">/swplatform/userinfo</parameter>
+            <parameter key="my_extensions">/api/swplatform/licenseenvironment</parameter>
+            <parameter key="my_plugin_updates">/api/swplatform/pluginupdates</parameter>
+            <parameter key="environment_information">/api/swplatform/environmentinformation</parameter>
+            <parameter key="updater_extension_compatibility">/api/swplatform/autoupdate</parameter>
+            <parameter key="updater_permission">/api/swplatform/autoupdate/permission</parameter>
+            <parameter key="plugin_download">/api/swplatform/pluginfiles/{pluginName}</parameter>
+            <parameter key="app_generate_signature">/api/swplatform/generatesignature</parameter>
+            <parameter key="cancel_license">/api/swplatform/pluginlicenses/%s/cancel</parameter>
+            <parameter key="login">/api/swplatform/login</parameter>
+            <parameter key="create_rating">/api/swplatform/extensionstore/extensions/%s/ratings</parameter>
+            <parameter key="user_info">/api/swplatform/userinfo</parameter>
             <!-- ExtensionStore -->
-            <parameter key="list_extensions">/swplatform/extensionstore/extensions</parameter>
-            <parameter key="extension_detail">/swplatform/extensionstore/extensions/%d</parameter>
-            <parameter key="filter">/swplatform/extensionstore/extensions/filter</parameter>
-            <parameter key="reviews">/swplatform/extensionstore/extensions/%d/reviews</parameter>
-            <parameter key="create_basket">/swplatform/extensionstore/baskets</parameter>
-            <parameter key="order_basket">/swplatform/extensionstore/orders</parameter>
-            <parameter key="payment_means">/swplatform/extensionstore/paymentmeans</parameter>
+            <parameter key="list_extensions">/api/swplatform/extensionstore/extensions</parameter>
+            <parameter key="extension_detail">/api/swplatform/extensionstore/extensions/%d</parameter>
+            <parameter key="filter">/api/swplatform/extensionstore/extensions/filter</parameter>
+            <parameter key="reviews">/api/swplatform/extensionstore/extensions/%d/reviews</parameter>
+            <parameter key="create_basket">/api/swplatform/extensionstore/baskets</parameter>
+            <parameter key="order_basket">/api/swplatform/extensionstore/orders</parameter>
+            <parameter key="payment_means">/api/swplatform/extensionstore/paymentmeans</parameter>
         </parameter>
     </parameters>
     <services>
