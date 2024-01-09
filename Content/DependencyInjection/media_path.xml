@@ -62,6 +62,7 @@
             <argument type="service" id="SnapAdmin\Core\Framework\DataAbstractionLayer\Dbal\Common\IteratorFactory"/>
             <argument type="service" id="SnapAdmin\Core\Content\Media\Core\Application\MediaPathUpdater"/>
             <argument type="service" id="Doctrine\DBAL\Connection"/>
+            <argument type="service" id="SnapAdmin\Core\Framework\DataAbstractionLayer\Indexing\EntityIndexerRegistry"/>
             <tag name="snap.entity_indexer"/>
         </service>
 

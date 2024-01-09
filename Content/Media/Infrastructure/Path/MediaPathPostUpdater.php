@@ -5,8 +5,10 @@ namespace SnapAdmin\Core\Content\Media\Infrastructure\Path;
 use Doctrine\DBAL\ArrayParameterType;
 use Doctrine\DBAL\Connection;
 use SnapAdmin\Core\Content\Media\Core\Application\MediaPathUpdater;
+use SnapAdmin\Core\Content\Media\DataAbstractionLayer\MediaIndexingMessage;
 use SnapAdmin\Core\Framework\DataAbstractionLayer\Dbal\Common\IteratorFactory;
 use SnapAdmin\Core\Framework\DataAbstractionLayer\Indexing\EntityIndexer;
+use SnapAdmin\Core\Framework\DataAbstractionLayer\Indexing\EntityIndexerRegistry;
 use SnapAdmin\Core\Framework\DataAbstractionLayer\Indexing\EntityIndexingMessage;
 use SnapAdmin\Core\Framework\DataAbstractionLayer\Indexing\PostUpdateIndexer;
 use SnapAdmin\Core\Framework\Log\Package;
@@ -20,10 +22,12 @@ class MediaPathPostUpdater extends PostUpdateIndexer
      * @internal
      */
     public function __construct(
-        private readonly IteratorFactory $iteratorFactory,
-        private readonly MediaPathUpdater $updater,
-        private readonly Connection $connection
-    ) {
+        private readonly IteratorFactory       $iteratorFactory,
+        private readonly MediaPathUpdater      $updater,
+        private readonly Connection            $connection,
+        private readonly EntityIndexerRegistry $indexerRegistry
+    )
+    {
     }
 
     public function getName(): string
@@ -55,6 +59,11 @@ class MediaPathPostUpdater extends PostUpdateIndexer
         );
 
         $this->updater->updateThumbnails($thumbnails);
+        // Because the thumbnails are changed we need to trigger the media indexer as well,
+        // because the thumbnail struct is denormalized into the media table
+        $mediaMessage = new MediaIndexingMessage($message->getData(), $message->getOffset(), $message->getContext());
+        $mediaMessage->setIndexer('media.indexer');
+        $this->indexerRegistry->__invoke($mediaMessage);
     }
 
     public function getTotal(): int
