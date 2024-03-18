@@ -224,7 +224,7 @@ class JsonApiEncoderTest extends TestCase
                 'manufacturer' => [
                     'id' => Uuid::randomHex(),
                     'name' => 'shopware AG',
-                    'link' => 'https://shopware.com',
+                    'link' => 'https://snapadmin.net',
                 ],
                 'toOne' => [
                     'name' => 'test',
@@ -268,7 +268,7 @@ class JsonApiEncoderTest extends TestCase
                 'manufacturer' => [
                     'id' => Uuid::randomHex(),
                     'name' => 'shopware AG',
-                    'link' => 'https://shopware.com',
+                    'link' => 'https://snapadmin.net',
                 ],
                 'oneToMany' => [
                     [

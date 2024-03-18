@@ -9,8 +9,8 @@ to our [main Shopware repository](https://github.com/shopware/shopware).
 Resources
 ---------
 
-  * [Documentation](https://developer.shopware.com)
-  * [Contributing](https://developer.shopware.com/docs/resources/guidelines/code/contribution.html)
+  * [Documentation](https://developer.snapadmin.net)
+  * [Contributing](https://developer.snapadmin.net/docs/resources/guidelines/code/contribution.html)
   * [Report issues](https://github.com/shopware/shopware/issues) and
     [send Pull Requests](https://github.com/shopware/shopware/pulls)
     in the [main Shopware\Core repository](https://github.com/shopware/shopware)

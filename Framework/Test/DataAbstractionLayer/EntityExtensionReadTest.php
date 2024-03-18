@@ -233,7 +233,7 @@ class EntityExtensionReadTest extends TestCase
                 'manufacturer' => [
                     'id' => Uuid::randomHex(),
                     'name' => 'shopware AG',
-                    'link' => 'https://shopware.com',
+                    'link' => 'https://snapadmin.net',
                 ],
                 'toOne' => [
                     'name' => 'test',
@@ -268,7 +268,7 @@ class EntityExtensionReadTest extends TestCase
                 'manufacturer' => [
                     'id' => Uuid::randomHex(),
                     'name' => 'shopware AG',
-                    'link' => 'https://shopware.com',
+                    'link' => 'https://snapadmin.net',
                 ],
                 'oneToMany' => [
                     ['name' => 'test 1', 'languageId' => Defaults::LANGUAGE_SYSTEM],
@@ -309,7 +309,7 @@ class EntityExtensionReadTest extends TestCase
                 'manufacturer' => [
                     'id' => Uuid::randomHex(),
                     'name' => 'shopware AG',
-                    'link' => 'https://shopware.com',
+                    'link' => 'https://snapadmin.net',
                 ],
             ],
         ], Context::createDefaultContext());
@@ -327,7 +327,7 @@ class EntityExtensionReadTest extends TestCase
                 'manufacturer' => [
                     'id' => Uuid::randomHex(),
                     'name' => 'shopware AG',
-                    'link' => 'https://shopware.com',
+                    'link' => 'https://snapadmin.net',
                 ],
                 'linkedProductId' => $linkedProductId,
             ],

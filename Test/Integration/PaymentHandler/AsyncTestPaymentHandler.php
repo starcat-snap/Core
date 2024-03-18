@@ -18,7 +18,7 @@ use Symfony\Component\HttpFoundation\Request;
 #[Package('checkout')]
 class AsyncTestPaymentHandler implements AsynchronousPaymentHandlerInterface
 {
-    final public const REDIRECT_URL = 'https://shopware.com';
+    final public const REDIRECT_URL = 'https://snapadmin.net';
 
     public function __construct(private readonly OrderTransactionStateHandler $transactionStateHandler)
     {

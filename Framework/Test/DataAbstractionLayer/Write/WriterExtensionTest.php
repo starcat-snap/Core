@@ -150,7 +150,7 @@ class WriterExtensionTest extends TestCase
                 'manufacturer' => [
                     'id' => Uuid::randomHex(),
                     'name' => 'shopware AG',
-                    'link' => 'https://shopware.com',
+                    'link' => 'https://snapadmin.net',
                 ],
             ],
         ], Context::createDefaultContext());
