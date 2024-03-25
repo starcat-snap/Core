@@ -45,7 +45,7 @@ class PluginRefreshCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new ShopwareStyle($input, $output);
-        $io->title('Shopware Plugin Service');
+        $io->title('SnapStore Plugin Service');
         $context = Context::createCLIContext();
 
         $composerInput = clone $input;

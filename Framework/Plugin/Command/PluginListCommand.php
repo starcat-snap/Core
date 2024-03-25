@@ -73,7 +73,7 @@ class PluginListCommand extends Command
         $pluginTable = [];
         $active = $installed = $upgradeable = 0;
 
-        $io->title('Shopware Plugin Service');
+        $io->title('SnapStore Plugin Service');
 
         if ($filter) {
             $io->comment(sprintf('Filtering for: %s', $filter));
