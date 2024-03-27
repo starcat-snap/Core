@@ -1,5 +1,5 @@
 {
-    "name": "snap-ag/core",
+    "name": "snap-store/core",
     "type": "library",
     "description": "Shopware platform is the core for all SnapStore ecommerce products.",
     "keywords": [
